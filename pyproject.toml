@@ -1,0 +1,30 @@
+[project]
+name = "smart-telegram-moderator"
+version = "1.0.0"
+description = "Интеллектуальный Telegram-бот для модерации групп (ML/NLP)"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --cov=app --cov-report=term-missing"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+source = ["app", "dashboard"]
+omit = ["app/main.py"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_ignores = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 90
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# B008: вызов Depends() в аргументах по умолчанию — штатный паттерн FastAPI.
+ignore = ["B008"]

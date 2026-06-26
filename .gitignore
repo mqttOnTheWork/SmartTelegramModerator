@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+.ci_venv/
+env/
+ENV/
+
+# Конфигурация и секреты
+.env
+*.env
+!.env.example
+
+# Тесты и покрытие
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ML артефакты
+*.pkl
+*.joblib
+*.pt
+*.onnx
+models/*.bin
+data/raw/
+data/processed/
+
+# Логи и БД
+*.log
+logs/
+*.sqlite3
+*.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Docker
+docker/data/
+
+# Прочее
+*.tmp
+_extract.py
